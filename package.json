@@ -1,0 +1,26 @@
+{
+  "name": "xor-cypto",
+  "version": "1.0.0",
+  "description": "A xor-crypto implements version of javascript, support nodejs & broswer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zihuatanejp/xor-cypto-js.git"
+  },
+  "keywords": [
+    "xor",
+    "crypto",
+    "math",
+    "string",
+    "utf8"
+  ],
+  "author": "lakepx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zihuatanejp/xor-cypto-js/issues"
+  },
+  "homepage": "https://github.com/zihuatanejp/xor-cypto-js#readme"
+}
