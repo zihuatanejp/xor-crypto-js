@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zihuatanejp/xor-cypto-js.git"
+    "url": "git+https://github.com/zihuatanejp/xor-crypto-js.git"
   },
   "keywords": [
     "xor",
@@ -20,7 +20,7 @@
   "author": "lakepx",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zihuatanejp/xor-cypto-js/issues"
+    "url": "https://github.com/zihuatanejp/xor-crypto-js/issues"
   },
-  "homepage": "https://github.com/zihuatanejp/xor-cypto-js#readme"
+  "homepage": "https://github.com/zihuatanejp/xor-crypto-js#readme"
 }
