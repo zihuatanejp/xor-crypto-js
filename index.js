@@ -106,12 +106,11 @@ try {
     if (window) {
         gbenv = window;
     }
-} catch (e) { log(e);}
+} catch (e) { log('window err',e);}
 try {
     if (global) {
         gbenv = global;
-        module.exports =
-            def;
+        module.exports =def;
     }
-} catch (e) {log(e);}
+} catch (e) {log('global err',e);}
 gbenv.xor = def;
