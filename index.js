@@ -103,7 +103,7 @@ function xor_by_bit(a, b) {
 
 var gbenv = {};
 try {
-    if (window) {
+    if (typeof window !== 'undefined' ) {
         gbenv = window;
     }
 } catch (e) { log('window err',e);}
