@@ -102,15 +102,16 @@ function xor_by_bit(a, b) {
 }
 
 var gbenv = {};
-try {
-    if (typeof window !== 'undefined' ) {
-        gbenv = window;
-    }
-} catch (e) { log('window err',e);}
+
 try {
     if (global) {
         gbenv = global;
         module.exports =def;
     }
 } catch (e) {log('global err',e);}
+try {
+    if (typeof window !== 'undefined' ) {
+        gbenv = window;
+    }
+} catch (e) { log('window err',e);}
 gbenv.xor = def;
