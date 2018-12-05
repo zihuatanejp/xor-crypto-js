@@ -1,5 +1,5 @@
 {
-  "name": "xor-cypto",
+  "name": "xor-crypto-js",
   "version": "1.0.1",
   "description": "A xor-crypto implements version of javascript, support nodejs & broswer.",
   "main": "index.js",
