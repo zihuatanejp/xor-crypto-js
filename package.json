@@ -1,6 +1,6 @@
 {
   "name": "xor-crypto-js",
-  "version": "1.6.7",
+  "version": "1.6.8",
   "description": "A xor-crypto implements version of javascript, support nodejs & broswer.",
   "main": "index.js",
   "scripts": {
