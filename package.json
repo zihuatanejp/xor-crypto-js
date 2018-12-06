@@ -15,7 +15,8 @@
     "crypto",
     "math",
     "string",
-    "utf8"
+    "utf8",
+    "crypto-js"
   ],
   "author": "lakepx",
   "license": "MIT",
