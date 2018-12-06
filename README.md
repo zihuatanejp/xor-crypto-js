@@ -1,10 +1,10 @@
-# xor-cypto-js
+# xor-crypto-js
 A xor-crypto implements version of javascript, support nodejs &amp; broswer.  
 params both support any utf8-character-string.
 
 ## Install
 ```bash
-npm i xor-cypto-js 
+npm i xor-crypto-js 
 ```
 
 ## Example use
