@@ -1,9 +1,10 @@
 'use strict';
 
 (function(f){
+    var log = console.log;
     var def = f();
     var gbenv = {};
-
+    
     try {
         if (global) {
             gbenv = global;
@@ -17,7 +18,7 @@
     } catch (e) { log('window err',e);}
     gbenv.xor = def;
 })(function(){
-    var log = console.log;
+    
     var def = {
         enc_xor: enc_xor,   //加密方法 传入两个必填参数 1:原文字符串  2.密钥字符串  返回：密文
         dec_xor: dec_xor  // 解密方法 传入两个必填参数 1.密文 2.密钥字符串   返回：原文
