@@ -10,7 +10,15 @@ npm i xor-crypto-js
 ## Example use
 
 ```javascript
+// In NodeJs
 var xor = require('xor-cypto-js');
+// In broswer
+// link with script tag in html: <script type="text/javascript" src="your-path-to/xor-crypto-js/index.js" ></script> 
+// then:
+var xor = window.xor;
+// In es6:
+import xor from 'xor-cypto-js'   // now, you should have babel support first.
+
 
 var plain_text = '窝爱你，sigou';  // 待加密的原文
 
@@ -23,4 +31,5 @@ console.log('cipher_text: ' + cipher_text); // '01etbgj77fig93ki1r6801703dq0ji3r
 var plain_is = xor.dec_xor(cipher_text, cipher_key);
 
 console.log('plain_is:',plain_is); // '窝爱你，sigou'
+
 ```
