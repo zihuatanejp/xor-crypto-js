@@ -14,9 +14,12 @@
     "xor",
     "crypto",
     "math",
-    "string",
     "utf8",
-    "crypto-js"
+    "symmetric",
+    "crypt",
+    "crypto-js",
+    "encryption",
+    "string"
   ],
   "author": "lakepx",
   "license": "MIT",
