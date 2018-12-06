@@ -11,13 +11,13 @@ npm i xor-crypto-js
 
 ```javascript
 // In NodeJs
-var xor = require('xor-cypto-js');
+var xor = require('xor-crypto-js');
 // In broswer
 // link with script tag in html: <script type="text/javascript" src="your-path-to/xor-crypto-js/index.js" ></script> 
 // then:
 var xor = window.xor;
 // In es6:
-import xor from 'xor-cypto-js'   // now, you should have babel support first.
+import xor from 'xor-crypto-js'   // now, you should have babel support first.
 
 
 var plain_text = '窝爱你，sigou';  // 待加密的原文
