@@ -1,27 +1,33 @@
 'use strict';
 
-(function(f){
+(function(f) {
     var log = console.log;
     var def = f();
     var gbenv = {};
-    
+
     try {
         if (global) {
             gbenv = global;
             module.exports = def;
         }
-    } catch (e) {log('global err',e);}
+    } catch (e) {
+        log('global err', e);
+    }
     try {
-        if (typeof window !== 'undefined' ) {
+        if (typeof window !== 'undefined') {
             gbenv = window;
         }
-    } catch (e) { log('window err',e);}
+    } catch (e) {
+        log('window err', e);
+    }
     gbenv.xor = def;
-})(function(){
-    
+})(function() {
+
     var def = {
-        enc_xor: enc_xor,   //加密方法 传入两个必填参数 1:原文字符串  2.密钥字符串  返回：密文
-        dec_xor: dec_xor  // 解密方法 传入两个必填参数 1.密文 2.密钥字符串   返回：原文
+        enc_xor: enc_xor, //加密方法 传入两个必填参数 1:原文字符串  2.密钥字符串  返回：密文
+        encrypt: encrypt, //加密方法 传入两个必填参数 1:原文字符串  2.密钥字符串  返回：密文
+        dec_xor: dec_xor, // 解密方法 传入两个必填参数 1.密文 2.密钥字符串   返回：原文
+        decrypt: decrypt // 解密方法 传入两个必填参数 1.密文 2.密钥字符串   返回：原文
     };
 
     //任意utf8字符串  和任意utf8密钥 的异或加解密
@@ -85,6 +91,52 @@
             }
         }
         return res;
+    }
+
+    function encrypt(plain_text, cipher_key) {
+        if (!plain_text || !cipher_key) {
+            return 'nil';
+        }
+        var c = str2hex(cipher_key);
+        var p = str2hex(plain_text);
+        var clen = c.length;
+        var plen = p.length;
+        var ci = 0;
+        var res = '';
+        for (var i = 0; i < plen; i++) {
+            if (i < clen) {
+                ci = i
+            } else {
+                ci = i % clen
+            }
+            var m = parseInt(p.charAt(i), 36);
+            var k = parseInt(c.charAt(ci), 36);
+            res = res + (m ^ k).toString(36);
+        }
+        return res;
+    }
+
+    function decrypt(plain_text, cipher_key) {
+        if (!cipher_text || !cipher_key) {
+            return 'nil';
+        }
+        var ck = str2hex(cipher_key);
+        var ct = cipher_text;
+        var cklen = ck.length;
+        var ctlen = ct.length;
+        var ki = 0;
+        var res = '';
+        for (var i = 0; i < ctlen; i++) {
+            if (i < cklen) {
+                ki = i
+            } else {
+                ki = i % cklen
+            }
+            var m = parseInt(ct.charAt(i), 36);
+            var k = parseInt(ck.charAt(ki), 36);
+            res = res + (m ^ k).toString(36);
+        }
+        return hex2str(res);
     }
 
     function split_pretty(s, d) {
