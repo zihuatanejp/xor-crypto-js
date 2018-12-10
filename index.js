@@ -116,7 +116,7 @@
         return res;
     }
 
-    function decrypt(plain_text, cipher_key) {
+    function decrypt(cipher_text, cipher_key) {
         if (!cipher_text || !cipher_key) {
             return 'nil';
         }
